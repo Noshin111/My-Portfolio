@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | Education</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="education">
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><span class="logo-dot"></span>Noshin Khan</a>
+      <button class="nav-toggle" aria-label="Open menu"></button>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="Project.html">Projects</a></li>
+        <li><a class="nav-link" href="Education.html">Education</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1 class="section-title">Education</h1>
+
+    <div class="edu-list">
+      <article class="edu-card glass">
+        <h3>Shri Ram Institute of Technology</h3>
+        <p class="muted">B.Tech Computer Science & Engineering</p>
+        <div class="edu-meta">
+          <span class="badge">2022 – 2026</span>
+          <span class="badge">CGPA: 7.19</span>
+        </div>
+        <ul class="list">
+         <li>Relevant Course Work - Data Structure & Algorithms, Web Development</li>
+          <li>Core: DSA, DBMS, OS, CN</li>
+        </ul>
+      </article>
+
+      <article class="edu-card glass">
+        <h3>Higher Secondary</h3>
+        <p class="muted">St. Norbert's G H S School</p>
+        <p class="muted">PCM</p>
+        <div class="edu-meta">
+          <span class="badge">2021 – 2022</span>
+          <span class="badge">69%</span>
+        </div>
+        <h3>Senior Secondary</h3>
+        <p class="muted">S.S CONVENT H.S SCHOOL</p>
+        <div class="edu-meta">
+          <span class="badge">2019 – 2020</span>
+          <span class="badge">79%</span>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    const current = document.body.getAttribute('data-page');
+    document.querySelectorAll('.nav-link').forEach(a=>{
+      if((current==='education' && a.href.endsWith('Education.html'))) a.classList.add('active');
+    });
+    document.querySelector('.nav-toggle').addEventListener('click', ()=>{
+      document.querySelector('.nav-links').classList.toggle('open');
+      document.querySelector('.nav-toggle').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
