@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="projects">
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><span class="logo-dot"></span>Noshin Khan</a>
+      <button class="nav-toggle" aria-label="Open menu"></button>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="Project.html">Projects</a></li>
+        <li><a class="nav-link" href="Education.html">Education</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1 class="section-title">Projects</h1>
+    <div class="grid cards-3">
+      <article class="card hover-rise">
+        <h3 class="card-title">Personal Project: Weather App</h3>
+        <p class="card-text">Built a weather forecasting app using Python and Flask that integrates with an external API for real-time data.</p>
+        <ul class="list">
+          <li>Designed a clean and user-friendly UI using HTML, CSS, and JavaScriptk</li>
+          <li>Deployed the app on Heroku for easy access and sharing.</li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="#" target="_blank">Live</a>
+          <a class="btn btn-ghost" href="#" target="_blank">Code</a>
+        </div>
+      </article>
+
+  <script>
+    const current = document.body.getAttribute('data-page');
+    document.querySelectorAll('.nav-link').forEach(a=>{
+      if((current==='projects' && a.href.endsWith('Project.html'))) a.classList.add('active');
+    });
+    document.querySelector('.nav-toggle').addEventListener('click', ()=>{
+      document.querySelector('.nav-links').classList.toggle('open');
+      document.querySelector('.nav-toggle').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
